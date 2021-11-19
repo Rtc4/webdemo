@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* Start Main Rules */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            text-align:center;
+            font-family: 'Open Sans', sans-serif;
+            background-image:url('https://www.artificielles.com/Files/24827/Img/08/500100430_echeveria_plante_grasse_artificielle_succulente_cactee_en_pot_ceramique_z.jpg');
+            background-size:100%100%;
+            position:relative;
+            padding:40px 0;
+        }
+        /* End Main Rules */
+        /* Start Over Lay */
+        .over-lay{
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            background-image: linear-gradient(to right, rgba(19,189,233,0.5), rgba(180,19,233,0.5));
+            z-index:1;
+        }
+        /* Start Form */
+        .form{
+            width:40%;
+            margin:0px auto;
+            background:#fff;
+            position:relative;
+            z-index:2;
+            border-radius:10px;
+            padding:50px
+        }
+        .form h2{
+            margin:50px 0;
+        }
+        form .input-group{
+            position:relative;
+            width:300px;
+            margin:auto;
+        }
+        form input{
+            box-shadow:4px 4px 12px 8px #efefef;
+            outline:none;
+            background:transparent;
+            border:none;
+            border-radius:18px;
+            padding:15px;
+            margin-bottom:40px;
+            font-size:16px;
+        }
+        .form form label{
+            display:block;
+            font-size:16px;
+            position:absolute;
+            top: 15px;
+            left:42px ;
+            width:180px;
+            height:40px;
+            text-align:left;
+            transition:.5s;
+            pointer-events: none;
+        }
+        .form .input-group input:focus ~ label,
+        .form .input-group input:valid ~ label{
+            top:-25px;
+            color:#652a7c;
+            font-weight:bold;
+        }
+        .form form input[type="submit"]{
+            display:block;
+            margin:30px auto;
+            padding:15px 60px;
+            border:none;
+            background-color: rgb(101, 42, 124);
+            font-size:20px;
+            color:#fff;
+            border-radius:25px;
+            cursor: pointer;
+        }
+        h5{
+            color:#a9a6a6;
+            margin:100px 0 30px;
+        }
+        a{
+            width:60px;
+            height:60px;
+            margin:5px;
+            text-decoration:none;
+            color:#333;
+            display:inline-block
+
+        }
+        a img{
+            width:60px;
+            height:60px;
+            box-shadow:3px 3px 10px 5px #efefef;
+            border-radius:50%;
+            transition: .5s all;
+        }
+        a:hover img{
+            transform: translateY(-10px) rotateZ(-360deg);
+        }
+        .sign-up{
+            margin: auto;
+            margin-top:100px;
+            display:block;
+            width:100px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+<!-- Start Over Lay For Body -->
+<div class="over-lay"></div>
+<!-- End Over Lay  -->
+<!-- Start Form Container -->
+<div class="form">
+    <h2>Sign In</h2>
+    <!-- Start Form Tag -->
+    <form name="sign-in" action="" method="post">
+        <!-- Start Input Container -->
+        <div class="input-group">
+            <input type="text" name="username" required/>
+            <label>User Name Or Email</label>
+        </div>
+        <!-- Start Input Container -->
+        <div class="input-group">
+            <input type="password" name="password" required/>
+            <label>Password</label>
+        </div>
+        <!--End Input Container -->
+        <input type="submit" value="Sign In"/>
+    </form>
+    <!-- End Form Tag -->
+    <!-- Start Social Longin In -->
+
+    <!-- Start Social Longin In -->
+    <a class="sign-up" href="#">Sign Up</a>
+</div>
+<!-- End Form Container -->
+
+</body>
+</html>
