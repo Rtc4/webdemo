@@ -1,4 +1,6 @@
-package com.usual;
+package d_com.usual;
+
+import d_com.usual.NutritionFacts;
 
 public class test {
     public static void main(String[] args) {

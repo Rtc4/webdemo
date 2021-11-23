@@ -1,4 +1,4 @@
-package com.test;
+package d_com.tset;
 
 public class testabcd {
     public static void main(String[] args) {

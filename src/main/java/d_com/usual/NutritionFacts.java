@@ -1,4 +1,4 @@
-package com.usual;
+package d_com.usual;
 
 public class NutritionFacts {
     private final int servingSize;

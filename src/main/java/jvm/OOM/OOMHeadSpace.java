@@ -1,4 +1,4 @@
-package com.test;
+package jvm.OOM;
 
 import java.util.ArrayList;
 import java.util.List;
