@@ -1,5 +1,6 @@
 package com.Market;
 
+
 public class Good {
     private String name;
     private int quantity;
