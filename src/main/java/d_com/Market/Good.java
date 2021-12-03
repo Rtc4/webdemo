@@ -7,16 +7,32 @@ public class Good implements Serializable {
     private String name;
     private int quantity;
     private double price;
+    public Good(){}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public String getName(){
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getName() {
         return name;
     }
-    public int getQuantity(){
+
+    public int getQuantity() {
         return quantity;
     }
-    public double getPrice(){
+
+    public double getPrice() {
         return price;
     }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+
 
     public static class Builder{
         String name="";

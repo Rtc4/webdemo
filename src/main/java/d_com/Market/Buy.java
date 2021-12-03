@@ -40,6 +40,7 @@ public class Buy extends HttpServlet {
         }
         req.setAttribute("count",count);
         req.setAttribute("goods",goods);
+        req.setAttribute("length",goods.length);
         req.getRequestDispatcher("sellFinish.jsp").forward(req,resp);
 
 //        String s = "<!DOCTYPE html>\n" +

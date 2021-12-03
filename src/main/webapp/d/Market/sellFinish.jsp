@@ -8,7 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@ page isELIgnored="false" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -73,32 +73,38 @@
                     <td>数量</td>
                     <td>价格</td>
                 </tr>
-            <c:forEach begin="goods"
-            <%
-                double cost = 0;
-                int i=0;
-                int count = (int) request.getAttribute("count");
-                Good[] goods = (Good[]) request.getAttribute("goods");
-               for (i = 0; i<count;i++) {
-                   //System.out.println(i);
-                   if (goods[i].getQuantity() != 0) {
-                        cost += goods[i].getPrice() * goods[i].getQuantity();
-            %>
-            <tr>
-                <td><%=goods[i].getName()%></td>
-                <td><%=goods[i].getPrice()%></td>
-                <td><%=goods[i].getQuantity()%></td>
-                <td><%=goods[i].getPrice()*goods[i].getQuantity()%></td>
-            </tr>
-            <%
-                    }
-                }
-            %>
+            <jsp:useBean id="goods" class="d_com.Market.Good" scope="application"></jsp:useBean>
+
+<%--            <jsp:getProperty name="good" property="goods1"/>--%>
+
+            <c:forEach begin="1" end="${length}" var="i" step="1">
+                ${goods[i-1].name}
+            </c:forEach>
+<%--            <%--%>
+<%--                double cost = 0;--%>
+<%--                int i=0;--%>
+<%--                int count = (int) request.getAttribute("count");--%>
+<%--                Good[] goods = (Good[]) request.getAttribute("goods");--%>
+<%--               for (i = 0; i<count;i++) {--%>
+<%--                   //System.out.println(i);--%>
+<%--                   if (goods[i].getQuantity() != 0) {--%>
+<%--                        cost += goods[i].getPrice() * goods[i].getQuantity();--%>
+<%--            %>--%>
+<%--            <tr>--%>
+<%--                <td><%=goods[i].getName()%></td>--%>
+<%--                <td><%=goods[i].getPrice()%></td>--%>
+<%--                <td><%=goods[i].getQuantity()%></td>--%>
+<%--                <td><%=goods[i].getPrice()*goods[i].getQuantity()%></td>--%>
+<%--            </tr>--%>
+<%--            <%--%>
+<%--                    }--%>
+<%--                }--%>
+<%--            %>--%>
 
         </table>
         <hr style="clear:both;">
         <div style="float: right;clear:both;">
-            总价：<%=cost%>
+<%--            总价：<%=cost%>--%>
         </div>
     </div>
 </div>
