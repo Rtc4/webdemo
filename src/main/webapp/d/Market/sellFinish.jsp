@@ -73,13 +73,34 @@
                     <td>数量</td>
                     <td>价格</td>
                 </tr>
-            <jsp:useBean id="goods" class="d_com.Market.Good" scope="application"></jsp:useBean>
+<%--            <jsp:useBean id="Good" class="d_com.Market.Good" scope="application"></jsp:useBean>--%>
 
 <%--            <jsp:getProperty name="good" property="goods1"/>--%>
 
-            <c:forEach begin="1" end="${length}" var="i" step="1">
-                ${goods[i-1].name}
+            <c:forEach begin="0" end="${length}" var="i" step="1">
+                <c:if test="${goods[i].quantity>0}">
+                    <tr>
+                        <td>${goods[i].name}</td>
+                        <td>${goods[i].price}</td>
+                        <td>${goods[i].quantity}</td>
+                        <td>${goods[i].price * goods[i].quantity}</td>
+                    </tr>
+                </c:if>
+
             </c:forEach>
+<%--            <c:forEach items="goods" var="good">--%>
+<%--&lt;%&ndash;                <jsp:useBean id="good" class="d_com.Market.Good" scope="page"/>&ndash;%&gt;--%>
+<%--                <c:if test="${good.quantity>0}">--%>
+<%--                    --%>
+<%--                    <tr>--%>
+<%--                        <td>${Good.name}</td>--%>
+<%--                        <td>${Good.price}</td>--%>
+<%--                        <td>${Good.quantity}</td>--%>
+<%--                        <td>${Good.price * Good.quantity}</td>--%>
+<%--                    </tr>--%>
+<%--                </c:if>--%>
+
+<%--            </c:forEach>--%>
 <%--            <%--%>
 <%--                double cost = 0;--%>
 <%--                int i=0;--%>
